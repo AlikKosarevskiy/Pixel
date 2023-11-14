@@ -28,6 +28,10 @@ boolean timingStarted = false;
 #define count_led 80
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(count_led, PIN, NEO_GRB + NEO_KHZ800);
 
+// IPAddress ip(192, 168, 1, 100); // Uniq IP
+// IPAddress gateway(192, 168, 1, 1);
+// IPAddress subnet(255, 255, 255, 0);
+
 void callback(char* topic, byte* payload, unsigned int length) {
   if (strcmp(topic, "Game") == 0) {
     char command = (char)payload[0];
